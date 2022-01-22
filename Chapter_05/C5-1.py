@@ -7,7 +7,7 @@ def calculator():
 
     while inp.isalnum():
         sum += int(inp, 16)
-        print("{:X}".format(sum))
+        print("The sum is: {:X}".format(sum))
         inp = input("Enter a hex number to add: ")
 
     print("\n === Exited ===")
