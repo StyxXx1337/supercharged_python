@@ -10,7 +10,6 @@ import re
 def valid_phone_number(number: str) -> bool:
     pat = r'(\+\d)?[- ]?(\d{3}[- ])?\d{3}[ -]\d{4}'
     if re.match(pat, number):
-        # print(re.match(pat, number))
         return True
     return False
 
