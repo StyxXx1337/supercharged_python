@@ -8,8 +8,7 @@ import re
 
 
 def valid_phone_number(number: str) -> bool:
-    pat = r'(\+\d)?[- ]?(\d{3}[- ])?\d{3}[ -]\d{4}'
-    pat1 = r'\d{3}[- ]\d{4}'
+    pat = r'(\d{3}[- ])?\d{3}[ -]\d{4}'
     if re.match(pat, number):
         # print(re.match(pat, number))
         return True
@@ -18,10 +17,8 @@ def valid_phone_number(number: str) -> bool:
 
 if __name__ == '__main__':
     print("====== True Cases =========")
-    print(valid_phone_number("+1-234-456-7890"))
     print(valid_phone_number("234-456-7890"))
     print(valid_phone_number("456-7890"))
-    print(valid_phone_number("+1 234 456 7890"))
     print(valid_phone_number("234 456 7890"))
     print(valid_phone_number("456 7890"))
 
